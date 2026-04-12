@@ -27,3 +27,7 @@ tasks {
         failOnWarning = true
     }
 }
+
+dependencies{
+    compileOnly(libs.android.gradlePlugin)
+}
