@@ -1,0 +1,15 @@
+package com.jaam.convention
+
+import org.gradle.api.Plugin
+import org.gradle.api.Project
+
+internal class JvmLibraryConventionPlugin : Plugin<Project> {
+    override fun apply(target: Project) {
+        with(target) {
+            with(pluginManager) {
+                apply("org.jetbrains.kotlin.jvm")
+            }
+            configureKotlinJvm()
+        }
+    }
+}
