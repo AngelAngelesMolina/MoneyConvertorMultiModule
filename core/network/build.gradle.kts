@@ -1,14 +1,19 @@
 plugins{
-    id("com.android.library")
+    //!! commented for customAndroidLibrary plugin
+/*    id("com.android.library")
     id("org.jetbrains.kotlin.plugin.compose")
-    kotlin("plugin.serialization")
+    kotlin("plugin.serialization")*/
+    //** 1. Normal customPlugin
+    //id("moneyConvertor.android.library")
+    //** 2.  libs catalog -> go to libs.versions.toml
+    alias(libs.plugins.moneyConvertor.android.library)
 
 }
 
 android{
     namespace = "com.mc.network"
 
-    compileSdk {
+    /*compileSdk {
         version = release(36) {
             minorApiLevel = 1
         }
@@ -24,6 +29,6 @@ android{
         implementation(libs.retrofit.logger)
         implementation(libs.retrofit.kotlin.serialization)
         implementation(libs.kotlin.serialization.json)
-    }
+    }*/
 
 }
