@@ -28,6 +28,19 @@ tasks {
     }
 }
 
-dependencies{
+dependencies {
     compileOnly(libs.android.gradlePlugin)
+    compileOnly(libs.kotlin.gradlePlugin)
 }
+
+/*REGISTERING PLUGIN */
+gradlePlugin{
+    plugins{
+        register("androidLibrary"){
+            id = "moneyConvertor.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+    }
+
+}
+

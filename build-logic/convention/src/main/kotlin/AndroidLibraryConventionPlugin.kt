@@ -1,4 +1,5 @@
 import com.android.build.api.dsl.LibraryExtension
+import com.jaam.convention.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -17,19 +18,9 @@ class AndroidLibraryConventionPlugin : Plugin<Project> { //You build a plugin in
             //Here we are going to configure kind of module
             //We need to add an extension en gradlePlugin
             extensions.configure<LibraryExtension> {
-                compileSdk {
-                    version = release(36) {
-                        minorApiLevel = 1
-                    }
-                }
-
-                defaultConfig {
-                    minSdk = 24
-                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-                    vectorDrawables{
-                        useSupportLibrary = true
-                    }
-                }
+                //new we can apply this for every module but we need to register
+                // n build.gradle.kts (convention)
+                configureKotlinAndroid()
             }
         }
     }
