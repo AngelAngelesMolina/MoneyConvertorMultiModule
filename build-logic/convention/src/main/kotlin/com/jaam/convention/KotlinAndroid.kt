@@ -3,6 +3,7 @@ package com.jaam.convention
 import org.gradle.api.Project
 import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.JavaVersion
+import org.gradle.api.plugins.JavaPluginExtension
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -46,4 +47,12 @@ private fun Project.configureKotlin() {
             )
         }
     }
+}
+
+internal fun Project.configureKotlinJvm(){
+    extensions.configure<JavaPluginExtension>(){
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    configureKotlin()
 }
