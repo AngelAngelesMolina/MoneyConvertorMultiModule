@@ -3,7 +3,7 @@ plugins{
     //!!Commented for use customPlugin
    /* id("com.android.library")
     id("org.jetbrains.kotlin.plugin.compose")*/
-    alias(libs.plugins.moneyConvertor.android.library)
+    alias(libs.plugins.moneyconvertor.android.library)
 }
 
 android{

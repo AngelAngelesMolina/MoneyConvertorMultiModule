@@ -80,5 +80,6 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-moneyConvertor-android-library = { id = "moneyConvertor.android.library", version = "unspecified" }
+moneyconvertor-android-library = { id = "moneyconvertor.android.library", version = "unspecified" }
+moneyconvertor-jvm = { id = "moneyconvertor.jvm.library", version = "unspecified" }
 

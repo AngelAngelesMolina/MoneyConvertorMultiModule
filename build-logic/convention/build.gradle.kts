@@ -37,8 +37,12 @@ dependencies {
 gradlePlugin{
     plugins{
         register("androidLibrary"){
-            id = "moneyConvertor.android.library"
-            implementationClass = "AndroidLibraryConventionPlugin"
+            id = "moneyconvertor.android.library"
+            implementationClass = "com.jaam.convention.AndroidLibraryConventionPlugin"
+        }
+        register("jvmLibrary"){
+            id = "moneyconvertor.jvm.library"
+            implementationClass = "com.jaam.convention.JvmLibraryConventionPlugin"
         }
     }
 

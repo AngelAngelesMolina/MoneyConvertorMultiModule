@@ -1,13 +1,12 @@
 plugins{
     //!! commented for customAndroidLibrary plugin
 /*    id("com.android.library")
-    id("org.jetbrains.kotlin.plugin.compose")
-    kotlin("plugin.serialization")*/
+    id("org.jetbrains.kotlin.plugin.compose")*/
     //** 1. Normal customPlugin
     //id("moneyConvertor.android.library")
     //** 2.  libs catalog -> go to libs.versions.toml
-    alias(libs.plugins.moneyConvertor.android.library)
-
+    alias(libs.plugins.moneyconvertor.android.library)
+    kotlin("plugin.serialization")
 }
 
 android{
@@ -22,13 +21,15 @@ android{
     defaultConfig {
         minSdk = 24
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
+    }*/
 
     dependencies{
         implementation(libs.retrofit)
         implementation(libs.retrofit.logger)
         implementation(libs.retrofit.kotlin.serialization)
         implementation(libs.kotlin.serialization.json)
-    }*/
+
+        implementation(project(":core:model"))
+    }
 
 }
