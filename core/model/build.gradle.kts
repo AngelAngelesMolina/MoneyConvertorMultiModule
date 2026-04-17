@@ -5,6 +5,4 @@ plugins {
 
 dependencies{
   implementation(libs.kotlin.serialization.json)
-
-
 }
