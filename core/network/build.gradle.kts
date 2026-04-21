@@ -6,6 +6,7 @@ plugins{
     //id("moneyConvertor.android.library")
     //** 2.  libs catalog -> go to libs.versions.toml
     alias(libs.plugins.moneyconvertor.android.library)
+    alias(libs.plugins.moneyconvertor.android.hilt)
     kotlin("plugin.serialization")
 }
 

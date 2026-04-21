@@ -31,6 +31,10 @@ tasks {
 dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.android.tools.common)
+
+    implementation(libs.ksp.gradlePlugin)
+//    implementation(libs.hilt.gradle.plugin)
 }
 
 /*REGISTERING PLUGIN */
@@ -43,6 +47,10 @@ gradlePlugin{
         register("jvmLibrary"){
             id = "moneyconvertor.jvm.library"
             implementationClass = "com.jaam.convention.JvmLibraryConventionPlugin"
+        }
+        register("androidHilt"){
+            id = "moneyconvertor.android.hilt"
+            implementationClass = "com.jaam.convention.AndroidHiltConventionPlugin"
         }
     }
 
