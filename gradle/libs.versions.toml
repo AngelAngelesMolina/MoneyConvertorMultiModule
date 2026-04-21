@@ -6,14 +6,16 @@ junitVersion = "1.3.0"
 espressoCore = "3.7.0"
 lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.12.4"
-kotlin = "2.0.21"
+kotlin = "2.3.10"
 composeBom = "2024.09.00"
 
 androidDesugarJdkLibs = "2.0.4"
 androidGradlePlugin = "9.0.1"
 androidTools = "32.1.0"
 hilt = "2.59.2"
-ksp = "1.9.22-1.0.18"
+#hilt = "2.59.2"
+ksp = "2.3.6"
+#ksp = "2.0.21-1.0.28"
 retrofit = "3.0.0"
 androidxComposeCompiler = "1.5.10"
 androidxHiltNavigationCompose = "1.3.0"
@@ -51,6 +53,8 @@ kotlin-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-s
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version = "1.3.0" }
+hilt-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
+
 
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-kotlin-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version = "1.0.0" }
@@ -82,4 +86,7 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 android-library = { id = "com.android.library", version.ref = "agp" }
 moneyconvertor-android-library = { id = "moneyconvertor.android.library", version = "unspecified" }
 moneyconvertor-jvm = { id = "moneyconvertor.jvm.library", version = "unspecified" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+moneyconvertor-android-hilt = { id = "moneyconvertor.android.hilt", version = "unspecified" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
